@@ -1,15 +1,25 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.1'
+gem 'rails', '3.2.3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-group :production, :staging do
-  gem "pg"
-end
 
 group :development, :test do
   gem 'sqlite3-ruby', :require => 'sqlite3'
+end
+
+group :assets do
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  
+  gem 'uglifier'
+end
+
+gem 'jquery-rails'
+
+group :production, :staging do
+  gem "pg"
 end
 
 # Use unicorn as the web server
