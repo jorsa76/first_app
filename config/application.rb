@@ -38,5 +38,8 @@ module FirstApp
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    
+    #Prevent initializing the application and connecting to the database
+    config.assets.initialize_on_precompile = false
   end
 end
